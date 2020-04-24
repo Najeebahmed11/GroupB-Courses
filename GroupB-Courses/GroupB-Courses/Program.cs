@@ -10,6 +10,8 @@ namespace GroupB_Courses
     public class Params : IEnumerable<int>
     {
         //link pad
+
+
         private int a, b, c;
 
         public Params(int a, int b, int c)
