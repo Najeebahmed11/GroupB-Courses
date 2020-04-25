@@ -18,6 +18,7 @@ namespace DbFirst
             {
                 Console.WriteLine(cou.Title);
             }
+            dbContext.GetAuthorCourses;
         }
     }
 }
