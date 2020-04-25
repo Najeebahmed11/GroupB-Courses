@@ -25,7 +25,7 @@ namespace DbFirst
         public int AuthorID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string LevelString { get; set; }
+        public int LevelString { get; set; }
         public short FullPrice { get; set; }
     
         public virtual Author Author { get; set; }

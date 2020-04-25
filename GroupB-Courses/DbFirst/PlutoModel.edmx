@@ -63,20 +63,6 @@
           <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Courses_Authors">
-          <End Role="Authors" Type="Self.Authors" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Authors">
-              <PropertyRef Name="AuthorID" />
-            </Principal>
-            <Dependent Role="Courses">
-              <PropertyRef Name="AuthorID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CourseSections_Courses">
           <End Role="Courses" Type="Self.Courses" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -162,10 +148,6 @@
           <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tags" EntityType="Self.Tags" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Courses_Authors" Association="Self.FK_Courses_Authors">
-            <End Role="Authors" EntitySet="Authors" />
-            <End Role="Courses" EntitySet="Courses" />
-          </AssociationSet>
           <AssociationSet Name="FK_CourseSections_Courses" Association="Self.FK_CourseSections_Courses">
             <End Role="Courses" EntitySet="Courses" />
             <End Role="CourseSections" EntitySet="CourseSections" />
@@ -199,7 +181,7 @@
           <Property Name="AuthorID" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="LevelString" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LevelString" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Author" Relationship="Self.FK_Courses_Authors" FromRole="Courses" ToRole="Authors" />
           <NavigationProperty Name="CourseSections" Relationship="Self.FK_CourseSections_Courses" FromRole="Courses" ToRole="CourseSections" />
           <NavigationProperty Name="Tags" Relationship="Self.CourseTags" FromRole="Courses" ToRole="Tags" />
@@ -291,10 +273,10 @@
             <End Role="Tags" EntitySet="Tags" />
           </AssociationSet>
           <FunctionImport Name="DeleteCourse">
-            <Parameter Name="CourseID" Mode="In" Type="Int32" />
+          <Parameter Name="CourseID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetAuthorCourses" IsComposable="true" ReturnType="Collection(PlutoModel.funcGetAuthorCourses_Result)">
-            <Parameter Name="AuthorID" Mode="In" Type="Int32" />
+          <Parameter Name="AuthorID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetCourses" ReturnType="Collection(PlutoModel.GetCoursesResult)" />
           <FunctionImport Name="InsertCourse">
@@ -330,6 +312,11 @@
           <Property Type="Int16" Name="FullPrice" Nullable="false" />
           <Property Type="String" Name="LevelString" Nullable="false" MaxLength="50" />
         </ComplexType>
+        <EnumType Name="CourseLevel" UnderlyingType="Byte">
+          <Member Name="Begginer" Value="1" />
+          <Member Name="Intermediate" Value="2" />
+          <Member Name="Advanced" Value="3" />
+        </EnumType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
