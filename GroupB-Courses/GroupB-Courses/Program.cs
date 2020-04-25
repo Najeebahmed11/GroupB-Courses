@@ -6,12 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GroupB_Courses
-{       class Program
+{
+    class Program
         {
-            static void Main(string[] args)
+        static void Main(string[] args)
+        {
+            var context = new TestDatabaseToDeleteEntities();
+            var post = new TestTable()
             {
-                
-            }
+                Id=123,
+                Name = "naje"
+
+            };
+            context.TestTables.Add(post);
+            context.SaveChanges();
         }
+    }
     
 }
