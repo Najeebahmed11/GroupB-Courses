@@ -20,6 +20,7 @@ namespace GroupB_Courses
             };
             context.TestTables.Add(post);
             context.SaveChanges();
+            
         }
     }
     
