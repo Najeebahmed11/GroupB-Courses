@@ -10,7 +10,7 @@ namespace DbFirst
     {
         static void Main(string[] args)
         {
-
+            //meta deta :refer to assemblies  
         }
     }
 }
