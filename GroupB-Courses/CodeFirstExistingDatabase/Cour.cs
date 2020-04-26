@@ -19,7 +19,6 @@ namespace CodeFirstExistingDatabase
         public string Description { get; set; }
 
         public short Price { get; set; }
-        public Category Category { get; set; }
 
         public string LevelString { get; set; }
 

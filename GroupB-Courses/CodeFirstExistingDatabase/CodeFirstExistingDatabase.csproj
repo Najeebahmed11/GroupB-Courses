@@ -53,7 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
-    <Compile Include="Category.cs" />
     <Compile Include="Cour.cs" />
     <Compile Include="Migrations\202004261324010_initialModel.cs" />
     <Compile Include="Migrations\202004261324010_initialModel.Designer.cs">
@@ -78,6 +77,14 @@
     <Compile Include="Migrations\202004261550501_deleteDatePublishedCoulmnFromCoursesTable.cs" />
     <Compile Include="Migrations\202004261550501_deleteDatePublishedCoulmnFromCoursesTable.Designer.cs">
       <DependentUpon>202004261550501_deleteDatePublishedCoulmnFromCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261623321_deleteCategryColumnFromCoursesTable.cs" />
+    <Compile Include="Migrations\202004261623321_deleteCategryColumnFromCoursesTable.Designer.cs">
+      <DependentUpon>202004261623321_deleteCategryColumnFromCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261626254_deleteCategriesTable.cs" />
+    <Compile Include="Migrations\202004261626254_deleteCategriesTable.Designer.cs">
+      <DependentUpon>202004261626254_deleteCategriesTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -107,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004261550501_deleteDatePublishedCoulmnFromCoursesTable.resx">
       <DependentUpon>202004261550501_deleteDatePublishedCoulmnFromCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261623321_deleteCategryColumnFromCoursesTable.resx">
+      <DependentUpon>202004261623321_deleteCategryColumnFromCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261626254_deleteCategriesTable.resx">
+      <DependentUpon>202004261626254_deleteCategriesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
