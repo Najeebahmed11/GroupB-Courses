@@ -17,7 +17,7 @@ namespace DbFirst
             foreach (var cou in courses)
             {
                 Console.WriteLine(cou.Title);
-                //completed Lesson
+                //started Code First
             }
             dbContext.GetAuthorCourses;
         }
