@@ -7,17 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DbFirst
+namespace CodeFirst
 {
     using System;
-    
-    public partial class GetCoursesResult
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Cours
     {
+        [Key]
         public int CourseID { get; set; }
         public int AuthorID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public short FullPrice { get; set; }
+        public short Price { get; set; }
         public string LevelString { get; set; }
+        public byte Level { get; set; }
+    
+        public virtual Author Author { get; set; }
     }
 }

@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GroupB_Courses
+namespace CodeFirst
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TestDatabaseToDeleteEntities : DbContext
+    public partial class PlutoEntities : DbContext
     {
-        public TestDatabaseToDeleteEntities()
-            : base("name=TestDatabaseToDeleteEntities")
+        public PlutoEntities()
+            : base("name=PlutoEntities")
         {
         }
     
@@ -25,6 +25,8 @@ namespace GroupB_Courses
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<TestTable> TestTables { get; set; }
+        public virtual DbSet<Author> Authors { get; set; }
+        public virtual DbSet<Cours> Courses { get; set; }
+        public virtual DbSet<Tag> Tags { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{491A975F-1765-4171-8768-8D2981F59920}</ProjectGuid>
+    <ProjectGuid>{1F286BC6-A696-454A-B32E-08BA71041881}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>CodeFirst</RootNamespace>
     <AssemblyName>CodeFirst</AssemblyName>
@@ -52,49 +52,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbModel.Context.tt</DependentUpon>
+    <Compile Include="Author.cs">
+      <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbModel.tt</DependentUpon>
+    <Compile Include="Cours.cs">
+      <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DbModel.Designer.cs">
+    <Compile Include="Migrations\202004261238495_IntialModel.cs" />
+    <Compile Include="Migrations\202004261238495_IntialModel.Designer.cs">
+      <DependentUpon>202004261238495_IntialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PlutoModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DbModel.edmx</DependentUpon>
+      <DependentUpon>PlutoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PlutoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlutoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PlutoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlutoModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tag.cs">
+      <DependentUpon>PlutoModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="DbModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DbModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DbModel.edmx.diagram">
-      <DependentUpon>DbModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="PlutoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PlutoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PlutoModel.edmx.diagram">
+      <DependentUpon>PlutoModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DbModel.Context.tt">
+    <Content Include="PlutoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DbModel.edmx</DependentUpon>
-      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
+      <DependentUpon>PlutoModel.edmx</DependentUpon>
+      <LastGenOutput>PlutoModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DbModel.tt">
+    <Content Include="PlutoModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DbModel.edmx</DependentUpon>
-      <LastGenOutput>DbModel.cs</LastGenOutput>
+      <DependentUpon>PlutoModel.edmx</DependentUpon>
+      <LastGenOutput>PlutoModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004261238495_IntialModel.resx">
+      <DependentUpon>202004261238495_IntialModel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

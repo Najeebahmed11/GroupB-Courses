@@ -7,14 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GroupB_Courses
+namespace CodeFirst
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TestTable
+    public partial class Tag
     {
-        public int Id { get; set; }
+        public int TagID { get; set; }
         public string Name { get; set; }
     }
 }
