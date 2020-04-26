@@ -67,6 +67,18 @@
     <Compile Include="Migrations\202004261357264_AddCategoryColumnToCourseTable.Designer.cs">
       <DependentUpon>202004261357264_AddCategoryColumnToCourseTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004261533188_AddDatePublishedCoulmnToCoursesTable.cs" />
+    <Compile Include="Migrations\202004261533188_AddDatePublishedCoulmnToCoursesTable.Designer.cs">
+      <DependentUpon>202004261533188_AddDatePublishedCoulmnToCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261537411_RenameTitleToNameInCoursesTable.cs" />
+    <Compile Include="Migrations\202004261537411_RenameTitleToNameInCoursesTable.Designer.cs">
+      <DependentUpon>202004261537411_RenameTitleToNameInCoursesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261550501_deleteDatePublishedCoulmnFromCoursesTable.cs" />
+    <Compile Include="Migrations\202004261550501_deleteDatePublishedCoulmnFromCoursesTable.Designer.cs">
+      <DependentUpon>202004261550501_deleteDatePublishedCoulmnFromCoursesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
@@ -86,6 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004261357264_AddCategoryColumnToCourseTable.resx">
       <DependentUpon>202004261357264_AddCategoryColumnToCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261533188_AddDatePublishedCoulmnToCoursesTable.resx">
+      <DependentUpon>202004261533188_AddDatePublishedCoulmnToCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261537411_RenameTitleToNameInCoursesTable.resx">
+      <DependentUpon>202004261537411_RenameTitleToNameInCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261550501_deleteDatePublishedCoulmnFromCoursesTable.resx">
+      <DependentUpon>202004261550501_deleteDatePublishedCoulmnFromCoursesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
