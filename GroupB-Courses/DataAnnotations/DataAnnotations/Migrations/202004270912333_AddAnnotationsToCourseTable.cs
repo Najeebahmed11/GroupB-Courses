@@ -7,6 +7,7 @@ namespace DataAnnotations.Migrations
     {
         public override void Up()
         {
+
             DropForeignKey("dbo.Courses", "Author_Id", "dbo.Authors");
             DropIndex("dbo.Courses", new[] { "Author_Id" });
             RenameColumn(table: "dbo.Courses", name: "Author_Id", newName: "AuthorId");
