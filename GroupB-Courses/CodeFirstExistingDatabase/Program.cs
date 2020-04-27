@@ -12,7 +12,7 @@ namespace CodeFirstExistingDatabase
         {
             //Data annotation and Fluent Api
             //override convention
-            //
+            //data annotation
         }
     }
 }
