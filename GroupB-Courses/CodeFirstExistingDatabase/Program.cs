@@ -10,7 +10,9 @@ namespace CodeFirstExistingDatabase
     {
         static void Main(string[] args)
         {
-            //intro
+            //Data annotation and Fluent Api
+            //override convention
+            //
         }
     }
 }

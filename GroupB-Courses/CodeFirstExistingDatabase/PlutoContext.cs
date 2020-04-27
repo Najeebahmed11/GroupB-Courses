@@ -17,6 +17,9 @@ namespace CodeFirstExistingDatabase
         public virtual DbSet<Tag> Tags { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Cour>()
+                .Property(t => t.Description)
+                .IsRequired();
         }
     }
 }
