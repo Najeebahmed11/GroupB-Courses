@@ -38,7 +38,7 @@ namespace Vidzy
             Console.WriteLine("ALL MOVIES PROJECTED INTO AN ANONYMOUS TYPE");
             foreach (var v in projected)
                 Console.WriteLine(v.MovieName);
-
+            //loading objects
             // All movies grouped by classification
             var groups = context.Videos
                 .GroupBy(v => v.Classification)
