@@ -1,29 +1,22 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.Remoting.Activation;
+using System.Runtime.Remoting.Contexts;
+
 namespace Queries
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var context = new PlutoContext();
-            //linq syntax
+            var Context = new PlutoContext();
             var query =
-                from c in context.Courses
-                where c.Name.Contains("c#")
-                orderby c.Name
-                select c;
-           // foreach(var course in query)
-            //{
-              //  Console.WriteLine(course.Name);
-            //}
-            //Extension method
-            var courses = context.Courses
-                .Where(c => c.Name.Contains("c#"))
-                .OrderBy(c => c.Name);
-            foreach(var course in courses)
+                from a in Context.Authors
+                join c in Context.Courses on a.Id equals c.Author.Id into g
+                select new { AuthorName = a.Name, Courses = g.Count() };
+            foreach(var x in query)
             {
-                Console.WriteLine(course.Name);
+                Console.WriteLine("{0}({1})", x.AuthorName, x.Courses);
             }
         }
     }
