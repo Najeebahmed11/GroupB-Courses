@@ -9,10 +9,9 @@ namespace Queries
         {
             var Context = new PlutoContext();
 
-            var course = Context.Courses.Find(4);
-            course.Name = "New Name";
-            course.AuthorId = 2;
-            
+            var author = Context.Authors.Include(a=>a.Courses).Single(a=>a.Id==2);
+            Context.Courses.RemoveRange(author.Courses);
+            Context.Authors.Remove(author);
             Context.SaveChanges();
        }
     }
