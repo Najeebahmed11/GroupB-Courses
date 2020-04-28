@@ -1,21 +1,26 @@
-﻿using System;
-using System.Linq;
-using System.Data.Entity;
+﻿using Queries.Persistence;
+
 namespace Queries
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var Context = new PlutoContext();
+            using (var unitOfWork = new UnitOfWork(new PlutoContext()))
+            {
+                // Example1
+                var course = unitOfWork.Courses.Get(1);
 
-            var author = Context.Authors.Include(a=>a.Courses).Single(a=>a.Id==2);
-            Context.Courses.RemoveRange(author.Courses);
-            Context.Authors.Remove(author);
-            Context.SaveChanges();
+                // Example2
+                var courses = unitOfWork.Courses.GetCoursesWithAuthors(1, 4);
 
-
-
-       }
+                // Example3
+                var author = unitOfWork.Authors.GetAuthorWithCourses(1);
+                unitOfWork.Courses.RemoveRange(author.Courses);
+                unitOfWork.Authors.Remove(author);
+                unitOfWork.Complete();
+            }
+        }
     }
 }
+  
