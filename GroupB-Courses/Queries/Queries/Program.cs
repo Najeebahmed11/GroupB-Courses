@@ -14,6 +14,7 @@ namespace Queries
             Context.Authors.Remove(author);
             Context.SaveChanges();
 
+
        }
     }
 }
