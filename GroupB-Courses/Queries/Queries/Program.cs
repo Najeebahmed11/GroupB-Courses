@@ -10,7 +10,11 @@ namespace Queries
         static void Main(string[] args)
         {
             var Context = new PlutoContext();
-            var corses=Context.Courses.Skip(10).Take(10);
+            var corses = Context.Courses;
+            foreach(var c in corses)
+            {
+                Console.WriteLine(c.Name);
+            }
 
         }
     }
