@@ -7,18 +7,18 @@ namespace Queries
     {
         static void Main(string[] args)
         {
-
-
             var Context = new PlutoContext();
-            var authors = Context.Authors.Single(a=>a.Id==1);
-            Context.Entry(authors).Collection(a => a.Courses).Query().Where(c=>c.FullPrice==0).Load();
-            Context.Courses.Where(c => c.AuthorId == authors.Id && c.FullPrice==0).Load();
-            foreach(var course in authors.Courses)
-            {
-                Console.WriteLine("{0} by {1}", course.Name, course.Author.Name);
-            }
             
-
-        }
+            var course = new Course
+            {
+                Name = "new Course 2",
+                Description = "new Description",
+                FullPrice=19.95f,
+                Level=1,
+                AuthorId=1
+            };
+            Context.Courses.Add(course);
+            Context.SaveChanges();
+       }
     }
 }
