@@ -79,6 +79,7 @@ namespace Vidzy
             using (var context = new VidzyContext())
             {
                 // This technique with LINQ leads to 
+
                 // 
                 // SELECT FROM Tags WHERE Name IN ('classics', 'drama')
                 var tags = context.Tags.Where(t => tagNames.Contains(t.Name)).ToList();
