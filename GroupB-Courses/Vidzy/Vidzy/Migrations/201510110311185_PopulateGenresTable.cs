@@ -14,7 +14,8 @@ VALUES
 	(3, 'Horror'), 
 	(4, 'Thriller'), 
 	(5, 'Family'), 
-	(6, 'Romance')
+	(6, 'Romance'),
+    (7, 'Drama')
 ");
         }
         
