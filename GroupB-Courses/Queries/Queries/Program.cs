@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
-using System.Runtime.Remoting.Activation;
-using System.Runtime.Remoting.Contexts;
-
+using System.Data.Entity;
 namespace Queries
 {
     class Program
@@ -12,11 +9,10 @@ namespace Queries
         {
 
             var Context = new PlutoContext();
-            IEnumerable<Course>courses=Context.Courses;
-            var filtered = courses.Where(c => c.Level == 1);
-            foreach(var fi in filtered)
+            var courses = Context.Courses.Include(c=>c.Author).ToList();
+            foreach(var course in courses)
             {
-                Console.WriteLine(fi.Name);
+                Console.WriteLine("{0} by {1}", course.Name, course.Author.Name);
             }
             
 
