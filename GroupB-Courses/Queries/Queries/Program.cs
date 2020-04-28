@@ -10,10 +10,7 @@ namespace Queries
         static void Main(string[] args)
         {
             var Context = new PlutoContext();
-            Context.Courses
-                .Where(c => c.Level == 1)
-                .OrderBy(a=>a.Name)
-                .SelectMany(c=>c.Tags);
+            var corses=Context.Courses.Skip(10).Take(10);
 
         }
     }
