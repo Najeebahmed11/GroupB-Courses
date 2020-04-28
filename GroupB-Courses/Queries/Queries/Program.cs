@@ -10,6 +10,7 @@ namespace Queries
     {
         static void Main(string[] args)
         {
+
             var Context = new PlutoContext();
             IEnumerable<Course>courses=Context.Courses;
             var filtered = courses.Where(c => c.Level == 1);
