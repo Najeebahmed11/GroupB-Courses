@@ -81,6 +81,10 @@
     <Compile Include="Migrations\201510110433495_AddTags.Designer.cs">
       <DependentUpon>201510110433495_AddTags.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510130257555_DisableCascadeDeleteBetweenGenresAndVideos.cs" />
+    <Compile Include="Migrations\201510130257555_DisableCascadeDeleteBetweenGenresAndVideos.Designer.cs">
+      <DependentUpon>201510130257555_DisableCascadeDeleteBetweenGenresAndVideos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510110433495_AddTags.resx">
       <DependentUpon>201510110433495_AddTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510130257555_DisableCascadeDeleteBetweenGenresAndVideos.resx">
+      <DependentUpon>201510130257555_DisableCascadeDeleteBetweenGenresAndVideos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
