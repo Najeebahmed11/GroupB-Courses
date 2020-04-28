@@ -8,16 +8,11 @@ namespace Queries
         static void Main(string[] args)
         {
             var Context = new PlutoContext();
+
+            var course = Context.Courses.Find(4);
+            course.Name = "New Name";
+            course.AuthorId = 2;
             
-            var course = new Course
-            {
-                Name = "new Course 2",
-                Description = "new Description",
-                FullPrice=19.95f,
-                Level=1,
-                AuthorId=1
-            };
-            Context.Courses.Add(course);
             Context.SaveChanges();
        }
     }
