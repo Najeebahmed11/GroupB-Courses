@@ -13,6 +13,7 @@ namespace Queries
             Context.Courses.RemoveRange(author.Courses);
             Context.Authors.Remove(author);
             Context.SaveChanges();
+
        }
     }
 }
