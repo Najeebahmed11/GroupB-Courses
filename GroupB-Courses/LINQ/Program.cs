@@ -20,6 +20,7 @@ namespace LINQ
                  i => i);
             Console.WriteLine($"sum:{sum}");
 
+
         }
     }
 }
