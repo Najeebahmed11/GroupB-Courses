@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\Code
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstExistingDatabase", "CodeFirstExistingDatabase\CodeFirstExistingDatabase.csproj", "{1FDE54D2-84B5-45C7-B814-F09B9D934FCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{194AD6AA-51AB-4FFF-8A07-F11B716D55BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1FDE54D2-84B5-45C7-B814-F09B9D934FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FDE54D2-84B5-45C7-B814-F09B9D934FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FDE54D2-84B5-45C7-B814-F09B9D934FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{194AD6AA-51AB-4FFF-8A07-F11B716D55BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{194AD6AA-51AB-4FFF-8A07-F11B716D55BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{194AD6AA-51AB-4FFF-8A07-F11B716D55BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{194AD6AA-51AB-4FFF-8A07-F11B716D55BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
