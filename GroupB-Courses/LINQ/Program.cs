@@ -12,19 +12,14 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            var numbers = Enumerable.Range(1, 20).ToArray();
-            var results = numbers.AsParallel()
-                .WithMergeOptions(ParallelMergeOptions.NotBuffered)
-                .Select(x =>
-                {
-                    var result = Math.Log10(x);
-                    Console.Write($"prodeuced{result}\t");
-                    return result;
-                });
-            foreach (var result in results)
-            {
-                Console.Write($"consummed:{result}\t");
-            }
+            var sum = ParallelEnumerable.Range(1, 1000)
+                .Aggregate(
+                 0,
+                 (partialsum, i) => partialsum += i,
+                 (total, subtotal) => total += subtotal,
+                 i => i);
+            Console.WriteLine($"sum:{sum}");
+
         }
     }
 }
