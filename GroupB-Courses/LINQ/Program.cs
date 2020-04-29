@@ -20,11 +20,6 @@ namespace LINQ
             var Remove = Evenquares.Where(y => y < 50);
             Console.WriteLine(Remove);
 
-
-
-
-
-
         }
     }
 }
