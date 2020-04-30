@@ -16,6 +16,7 @@ namespace TestNinja.UnitTests
         {
             _math = new Math();
         }
+
         [Test]
        // [Ignore("bacause i wan to")]
         public void Add_WhenCalled_ReturnTheSumOfArguments()
