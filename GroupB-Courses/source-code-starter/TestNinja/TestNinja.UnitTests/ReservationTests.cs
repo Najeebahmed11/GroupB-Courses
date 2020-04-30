@@ -10,6 +10,7 @@ namespace TestNinja.UnitTests
 
 
 
+
         [Test]
         public void CanBeCancelledBy_UserIsAdmin_ReturnsTrue()
         {
