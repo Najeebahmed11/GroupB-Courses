@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,15 @@ namespace TestNinja.UnitTests
             var logger = new ErrorLogger();
             logger.Log("a");
             Assert.That(logger.LastError, Is.EqualTo("a"));
+        }
+        [Test]
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase(" ")]
+        public void Log_InvalidError_ThrowArgymentNullException(string error)
+        {
+            var logger = new ErrorLogger();
+            Assert.That(() => logger.Log(error), Throws.ArgumentNullException);
         }
     }
 }
