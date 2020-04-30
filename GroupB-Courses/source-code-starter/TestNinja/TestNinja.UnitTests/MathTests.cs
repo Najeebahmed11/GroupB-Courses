@@ -18,6 +18,7 @@ namespace TestNinja.UnitTests
         }
         [Test]
        // [Ignore("bacause i wan to")]
+
         public void Add_WhenCalled_ReturnTheSumOfArguments()
         {
             var number = _math.Add(1, 2);
