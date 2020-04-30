@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 
 namespace TestNinja.Mocking
 {
+
     public class VideoService
     {
         public string ReadVideoTitle()
