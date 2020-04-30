@@ -17,10 +17,11 @@ namespace TestNinja.UnitTests
             _math = new Math();
         }
         [Test]
+       // [Ignore("bacause i wan to")]
         public void Add_WhenCalled_ReturnTheSumOfArguments()
         {
             var number = _math.Add(1, 2);
-            Assert.That(number, Is.EqualTo(3));
+           // Assert.That(number, Is.EqualTo(3));
         }
         [Test]
         [TestCase(2,1,2)]
