@@ -8,6 +8,7 @@ namespace TestNinja.UnitTests
     public class ReservationTests
     {
 
+
         [Test]
         public void CanBeCancelledBy_UserIsAdmin_ReturnsTrue()
         {
