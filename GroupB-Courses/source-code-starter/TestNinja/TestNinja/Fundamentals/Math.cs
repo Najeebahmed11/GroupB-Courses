@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-
 namespace TestNinja.Fundamentals
 {
     public class Math
