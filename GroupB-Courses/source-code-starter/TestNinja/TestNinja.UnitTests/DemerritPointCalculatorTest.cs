@@ -8,6 +8,7 @@ namespace TestNinja.UnitTests
     [TestFixture]
     public class DemerritPointCalculatorTest
     {
+
         [Test]
         public void DemerritPountCalculator_On_Speed_Zero()
         {
