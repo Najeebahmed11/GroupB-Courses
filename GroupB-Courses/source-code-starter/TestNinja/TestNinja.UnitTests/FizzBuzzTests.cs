@@ -1,19 +1,21 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TestNinja.Fundamentals;
 
 namespace TestNinja.UnitTests
 {
     [TestFixture]
-    public class FizzBuzzTests
+    class FizzBuzzTests
     {
-        [TestMethod]
-        public void GetOutput_Is_a_String()
+        [Test]
+        public void GetOutput_OutPUt_Is_A_string()
         {
-            var fizz = new FizzBuzz();
-            var reult=fizz.GetOutput(34);
-            Assert.That(reult, Is.TypeOf<string>());
+            var re=FizzBuzz.GetOutput(3);
+            Assert.That(re, Is.EqualTo("FizzBuzz"));
         }
     }
 }
