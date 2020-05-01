@@ -12,6 +12,7 @@ namespace TestNinja.UnitTests
         {
             var stack = new Fundamentals.Stack<string>();
             Assert.That(() => stack.Push(null), Throws.ArgumentNullException);
+        }
 
 
 
