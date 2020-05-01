@@ -9,10 +9,15 @@ namespace TestNinja.Mocking
 {
     public class VideoService
     {
-        public string ReadVideoTitle(IFileReader filereader)
+        public IFileReader FileReader { get; set; }
+        public VideoService()
+        {
+            FileReader = new FileReader();
+        }
+        public string ReadVideoTitle()
         {
             //method parameter
-            var str = filereader.Read("video.txt");
+            var str = FileReader.Read("video.txt");
             var video = JsonConvert.DeserializeObject<Video>(str);
             if (video == null)
                 return "Error parsing the video.";
