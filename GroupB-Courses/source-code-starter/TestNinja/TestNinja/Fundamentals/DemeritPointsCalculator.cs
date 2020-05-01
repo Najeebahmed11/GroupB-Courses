@@ -8,6 +8,7 @@ namespace TestNinja.Fundamentals
         private const int MaxSpeed = 300;
         
         public int CalculateDemeritPoints(int speed)
+
         {
             if (speed < 0 || speed > MaxSpeed) 
                 throw new ArgumentOutOfRangeException();
