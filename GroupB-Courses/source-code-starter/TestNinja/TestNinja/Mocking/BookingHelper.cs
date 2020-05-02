@@ -7,7 +7,7 @@ namespace TestNinja.Mocking
     public static class BookingHelper
 
     {
-        public static string OverlappingBookingsExist(Booking booking,IBooking_Repository repository)
+        public static string OverlappingBookingsExist(Booking booking,IBookingRepository repository)
         {
             if (booking.Status == "Cancelled")
                 return string.Empty;

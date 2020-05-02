@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestNinja.Mocking
 {
-    class Booking_Repository : IBooking_Repository
+    class Booking_Repository : IBookingRepository
     {
         public IQueryable<Booking> GetActiveBookings(int? excludedbookingId = null)
         {
