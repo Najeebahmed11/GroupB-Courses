@@ -30,6 +30,7 @@ namespace TestNinja.UnitTests.Mocking
             var result = product.GetPrice(customer.Object);
             Assert.That(result, Is.EqualTo(70));
 
+
         }
     }
 }
