@@ -12,6 +12,7 @@ namespace TestNinja.UnitTests.Mocking
     [TestFixture]
     class VideoServiceTests
     {
+
         [SetUp]
         public void Setup()
         {
