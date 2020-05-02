@@ -5,6 +5,7 @@ using System.Linq;
 namespace TestNinja.Mocking
 {
     public static class BookingHelper
+
     {
         public static string OverlappingBookingsExist(Booking booking)
         {
