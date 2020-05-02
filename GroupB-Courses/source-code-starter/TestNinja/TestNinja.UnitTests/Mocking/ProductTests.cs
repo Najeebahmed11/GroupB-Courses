@@ -22,6 +22,7 @@ namespace TestNinja.UnitTests.Mocking
 
         }
         [Test]
+
         public void GetPrice_GoldCustomer_Apply30PercentDiscount2()
         {
             var customer = new Mock<ICustomer>();
