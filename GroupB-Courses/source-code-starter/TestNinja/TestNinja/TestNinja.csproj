@@ -60,8 +60,10 @@
     <Compile Include="Fundamentals\Stack.cs" />
     <Compile Include="Mocking\BookingHelper.cs" />
     <Compile Include="Mocking\EmployeeController.cs" />
+    <Compile Include="Mocking\FileDownLoader.cs" />
     <Compile Include="Mocking\FileReader.cs" />
     <Compile Include="Mocking\ICustomer.cs" />
+    <Compile Include="Mocking\IFileDownLoader.cs" />
     <Compile Include="Mocking\InstallerHelper.cs" />
     <Compile Include="Mocking\IVideoRepository.cs" />
     <Compile Include="Mocking\OrderService.cs" />
