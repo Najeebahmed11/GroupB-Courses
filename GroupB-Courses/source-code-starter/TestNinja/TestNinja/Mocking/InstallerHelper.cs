@@ -17,7 +17,7 @@ namespace TestNinja.Mocking
 
             try
             {
-                _fileDownloader.DownloadFile(
+                 _fileDownloader.DownloadFile(
                     string.Format("http://example.com/{0}/{1}",
                         customerName,
                         installerName),
