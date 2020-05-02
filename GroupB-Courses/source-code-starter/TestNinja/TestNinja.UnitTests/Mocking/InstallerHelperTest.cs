@@ -27,6 +27,7 @@ namespace TestNinja.UnitTests.Mocking
             var result=_installerHelper.DownloadInstaller("customer", "installer");
             Assert.That(result, Is.False);
         }
+
         [Test]
         public void DownloadInstaller_DownlaodComplete_ReturnTrue()
         {
