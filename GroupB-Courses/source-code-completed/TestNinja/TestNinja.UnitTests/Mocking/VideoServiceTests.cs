@@ -11,7 +11,6 @@ namespace TestNinja.UnitTests.Mocking
         private VideoService _videoService;
         private Mock<IFileReader> _fileReader;
         private Mock<IVideoRepository> _repository;
-
         [SetUp]
         public void SetUp()
         {
