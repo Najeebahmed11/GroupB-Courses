@@ -79,6 +79,7 @@ namespace TestNinja.UnitTests.Mocking
         }
 
         [Test]
+
         public void SendStatementEmails_HouseKeepersEmailIsEmpty_ShouldNotGenerateStatement()
         {
             _houseKeeper.Email = "";
