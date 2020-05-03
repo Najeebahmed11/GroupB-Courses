@@ -9,7 +9,6 @@ namespace TestNinja.Mocking
     }
 
     public class StatementGenerator : IStatementGenerator
-
     {
         public string SaveStatement(int housekeeperOid, string housekeeperName, DateTime statementDate)
         {
