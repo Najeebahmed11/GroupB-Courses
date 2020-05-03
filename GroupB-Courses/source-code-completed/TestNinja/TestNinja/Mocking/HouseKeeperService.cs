@@ -6,6 +6,7 @@ using System.Text;
 
 namespace TestNinja.Mocking
 {
+
     public class HouseKeeperService
     {
         private readonly IUnitOfWork _unitOfWork;
